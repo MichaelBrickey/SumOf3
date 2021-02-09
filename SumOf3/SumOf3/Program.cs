@@ -4,34 +4,30 @@ namespace SumOf3
 {
     class Program
     {
-        static void Main(string[] args)
+        static void Main(string[] args)                     //Michael Brickey
         {
-            Double Number1, Number2, Number3;
+          
            const double MAGIC_NUMBER = 7.777; //local constant variable
-            double total; 
 
+            Console.WriteLine("Please enter the first number >>");
+            string answer = Console.ReadLine();
+            double number1 = Convert.ToDouble(answer);
 
+            Console.WriteLine("Please enter the second number >>");
+            answer = Console.ReadLine();
+            double number2 = Convert.ToDouble(answer);
 
-            Console.WriteLine("Please enter a whole number >>");
-            Number1 = Console.ReadLine();
+            Console.WriteLine("Please enter the third number >>");
+            answer = Console.ReadLine();
+            double number3 = Convert.ToDouble(answer);
 
-            Console.WriteLine("Please enter a number with a decimal to the hundredths place >>");
-            Number2 = Console.ReadLine();
+            double sum = number1 + number2 + number3;
 
-            Console.WriteLine("Please enter a number with a decimal to the thousandths place >>");
-            Number3 = Console.ReadLine();
+           Console.WriteLine($"{number1} + {number2} + {number3} = {sum.ToString("N3")}");
 
-           total = Convert.ToDouble()
+            double magicnumbertimessum = sum * MAGIC_NUMBER;
 
-
-
-            String output = Number1 + Number2 + Number3;
-            Console.WriteLine(output);
-
-            
-
-
-
+            Console.WriteLine($"Your sum multiplied by our magic number is {magicnumbertimessum.ToString("N3")}");
 
 
         }
